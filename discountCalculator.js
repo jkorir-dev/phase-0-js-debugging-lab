@@ -1,7 +1,13 @@
+/**
+ * Calculates the total price after applying a bulk discount based on quantity.
+ * @param {number} quantity - The total number of items purchased.
+ * @param {number} pricePerItem - The cost of a single line item.
+ * @returns {number} The finalized discounted total price.
+ */
 function calculateDiscountedPrice(quantity, pricePerItem) {
     let totalPrice = 0;
-    debugger
-    for (let i = 1; i < quantity; i++) {
+
+    for (let i = 0; i < quantity; i++) {
         totalPrice += pricePerItem;
     }
 
@@ -11,7 +17,5 @@ function calculateDiscountedPrice(quantity, pricePerItem) {
 
     return totalPrice;
 }
-
-
 
 module.exports = calculateDiscountedPrice;
